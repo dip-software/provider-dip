@@ -6,6 +6,7 @@ Copyright 2024 Koninklijke Philips N.V., https://www.philips.com
 
 import (
 	"github.com/crossplane/upjet/v2/pkg/config"
+
 	"github.com/dip-software/provider-dip/config/common"
 )
 
