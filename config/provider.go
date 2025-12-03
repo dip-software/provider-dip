@@ -4,15 +4,19 @@ import (
 	// Note(turkenh): we are importing this to embed provider schema document
 	_ "embed"
 
+	"github.com/philips-software/terraform-provider-hsdp/hsdp"
+
 	ujconfig "github.com/crossplane/upjet/v2/pkg/config"
 
-	nullCluster "github.com/crossplane/upjet-provider-template/config/cluster/null"
-	nullNamespaced "github.com/crossplane/upjet-provider-template/config/namespaced/null"
+	"github.com/philips-software/provider-hsdp/config/connect/dbs"
+	"github.com/philips-software/provider-hsdp/config/connect/mdm"
+	"github.com/philips-software/provider-hsdp/config/iam"
+	"github.com/philips-software/provider-hsdp/config/tenant"
 )
 
 const (
-	resourcePrefix = "template"
-	modulePath     = "github.com/crossplane/upjet-provider-template"
+	resourcePrefix = "hsdp"
+	modulePath     = "github.com/philips-software/provider-hsdp"
 )
 
 //go:embed schema.json
@@ -24,16 +28,22 @@ var providerMetadata string
 // GetProvider returns provider configuration
 func GetProvider() *ujconfig.Provider {
 	pc := ujconfig.NewProvider([]byte(providerSchema), resourcePrefix, modulePath, []byte(providerMetadata),
-		ujconfig.WithRootGroup("template.crossplane.io"),
-		ujconfig.WithIncludeList(ExternalNameConfigured()),
+		ujconfig.WithShortName("hsdp"),
+		ujconfig.WithRootGroup("hsdp.crossplane.io"),
+		ujconfig.WithTerraformPluginSDKIncludeList(ExternalNameConfigured()),
+		ujconfig.WithIncludeList([]string{}),
 		ujconfig.WithFeaturesPackage("internal/features"),
+		ujconfig.WithTerraformProvider(hsdp.Provider("v0.71.1")),
 		ujconfig.WithDefaultResourceOptions(
 			ExternalNameConfigurations(),
 		))
 
 	for _, configure := range []func(provider *ujconfig.Provider){
 		// add custom config functions
-		nullCluster.Configure,
+		iam.Configure,
+		dbs.Configure,
+		mdm.Configure,
+		tenant.Configure,
 	} {
 		configure(pc)
 	}
@@ -45,9 +55,12 @@ func GetProvider() *ujconfig.Provider {
 // GetProviderNamespaced returns the namespaced provider configuration
 func GetProviderNamespaced() *ujconfig.Provider {
 	pc := ujconfig.NewProvider([]byte(providerSchema), resourcePrefix, modulePath, []byte(providerMetadata),
-		ujconfig.WithRootGroup("template.m.crossplane.io"),
-		ujconfig.WithIncludeList(ExternalNameConfigured()),
+		ujconfig.WithShortName("hsdp"),
+		ujconfig.WithRootGroup("hsdp.m.crossplane.io"),
+		ujconfig.WithTerraformPluginSDKIncludeList(ExternalNameConfigured()),
+		ujconfig.WithIncludeList([]string{}),
 		ujconfig.WithFeaturesPackage("internal/features"),
+		ujconfig.WithTerraformProvider(hsdp.Provider("v0.71.1")),
 		ujconfig.WithDefaultResourceOptions(
 			ExternalNameConfigurations(),
 		),
@@ -57,7 +70,10 @@ func GetProviderNamespaced() *ujconfig.Provider {
 
 	for _, configure := range []func(provider *ujconfig.Provider){
 		// add custom config functions
-		nullNamespaced.Configure,
+		iam.Configure,
+		dbs.Configure,
+		mdm.Configure,
+		tenant.Configure,
 	} {
 		configure(pc)
 	}

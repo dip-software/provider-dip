@@ -8,16 +8,22 @@ import (
 // provider.
 var ExternalNameConfigs = map[string]config.ExternalName{
 	// Import requires using a randomly generated ID from provider: nl-2e21sda
-	"null_resource": idWithStub(),
-}
-
-func idWithStub() config.ExternalName {
-	e := config.IdentifierFromProvider
-	e.GetExternalNameFn = func(tfstate map[string]any) (string, error) {
-		en, _ := config.IDAsExternalName(tfstate)
-		return en, nil
-	}
-	return e
+	"hsdp_iam_group":               config.IdentifierFromProvider,
+	"hsdp_iam_org":                 config.IdentifierFromProvider,
+	"hsdp_iam_application":         config.IdentifierFromProvider,
+	"hsdp_iam_client":              config.IdentifierFromProvider,
+	"hsdp_iam_email_template":      config.IdentifierFromProvider,
+	"hsdp_iam_proposition":         config.IdentifierFromProvider,
+	"hsdp_iam_service":             config.IdentifierFromProvider,
+	"hsdp_iam_role":                config.IdentifierFromProvider,
+	"hsdp_iam_password_policy":     config.IdentifierFromProvider,
+	"hsdp_iam_role_sharing_policy": config.IdentifierFromProvider,
+	"hsdp_iam_user":                config.IdentifierFromProvider,
+	"hsdp_dbs_sqs_subscriber":      config.IdentifierFromProvider,
+	"hsdp_dbs_topic_subscription":  config.IdentifierFromProvider,
+	"hsdp_connect_mdm_proposition": config.IdentifierFromProvider,
+	"hsdp_connect_mdm_data_type":   config.IdentifierFromProvider,
+	"hsdp_tenant_key":              config.IdentifierFromProvider,
 }
 
 // ExternalNameConfigurations applies all external name configs listed in the

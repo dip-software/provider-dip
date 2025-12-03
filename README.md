@@ -1,15 +1,19 @@
-# Provider Template
+# Provider HSDP
 
-`upjet-provider-template` is a [Crossplane](https://crossplane.io/) provider
-template that is built using [Upjet](https://github.com/crossplane/upjet) code
-generation tools and exposes XRM-conformant managed resources for the Template
-API.
+`provider-hsdp` is a [Crossplane](https://crossplane.io/) provider that is built using [Upjet](https://github.com/crossplane/upjet) code generation tools and exposes XRM-conformant managed resources for the [HSDP (Philips HealthSuite Digital Platform)](https://www.philips.com/a-w/about/innovation/healthsuite-digital-platform.html) API.
+
+## Overview
+
+This provider wraps the [terraform-provider-hsdp](https://github.com/philips-software/terraform-provider-hsdp) to provide Kubernetes-native management of HSDP resources including:
+
+- **IAM (Identity and Access Management)**: Organizations, Users, Groups, Roles, Applications, Services, Clients, etc.
+- **DBS (Data Broker Service)**: SQS Subscribers, Topic Subscriptions
+- **MDM (Master Data Management)**: Propositions, Data Types
+- **Tenant Management**: Tenant Keys
 
 ## Getting Started
 
-This template serves as a starting point for generating a new [Crossplane Provider](https://docs.crossplane.io/latest/packages/providers/) using the [`upjet`](https://github.com/crossplane/upjet) tooling. Please follow the guide linked below to generate a new Provider:
-
-https://github.com/crossplane/upjet/blob/main/docs/generating-a-provider.md
+For more information on getting started with Crossplane providers, see the [Crossplane documentation](https://docs.crossplane.io/latest/packages/providers/).
 
 ## Developing
 
@@ -39,4 +43,4 @@ make build
 ## Report a Bug
 
 For filing bugs, suggesting improvements, or requesting new features, please
-open an [issue](https://github.com/crossplane/upjet-provider-template/issues).
+open an [issue](https://github.com/philips-software/provider-hsdp/issues).

@@ -1,0 +1,20 @@
+apiVersion: mdm.hsdp.m.crossplane.io/v1alpha1
+kind: DataType
+metadata:
+  annotations:
+    meta.upbound.io/example-id: mdm/v1alpha1/datatype
+  labels:
+    testing.upbound.io/example-name: some_type
+  name: some-type
+  namespace: crossplane-system
+spec:
+  forProvider:
+    description: A Terraform provisioned DataType
+    name: tf-some-data-type
+    propositionSelector:
+      matchLabels:
+        testing.upbound.io/example-name: hsdp_connect_mdm_proposition
+    tags:
+    - ONE
+    - TWO
+    - THREE
