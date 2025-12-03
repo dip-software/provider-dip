@@ -10,12 +10,12 @@ package namespaced
 import (
 	"k8s.io/apimachinery/pkg/runtime"
 
-	v1alpha1 "github.com/philips-software/provider-hsdp/apis/namespaced/dbs/v1alpha1"
-	v1alpha1iam "github.com/philips-software/provider-hsdp/apis/namespaced/iam/v1alpha1"
-	v1alpha1mdm "github.com/philips-software/provider-hsdp/apis/namespaced/mdm/v1alpha1"
-	v1alpha1tenant "github.com/philips-software/provider-hsdp/apis/namespaced/tenant/v1alpha1"
-	v1alpha1namespaced "github.com/philips-software/provider-hsdp/apis/namespaced/v1alpha1"
-	v1beta1 "github.com/philips-software/provider-hsdp/apis/namespaced/v1beta1"
+	v1alpha1 "github.com/dip-software/provider-dip/apis/namespaced/dbs/v1alpha1"
+	v1alpha1iam "github.com/dip-software/provider-dip/apis/namespaced/iam/v1alpha1"
+	v1alpha1mdm "github.com/dip-software/provider-dip/apis/namespaced/mdm/v1alpha1"
+	v1alpha1tenant "github.com/dip-software/provider-dip/apis/namespaced/tenant/v1alpha1"
+	v1alpha1namespaced "github.com/dip-software/provider-dip/apis/namespaced/v1alpha1"
+	v1beta1 "github.com/dip-software/provider-dip/apis/namespaced/v1beta1"
 )
 
 func init() {

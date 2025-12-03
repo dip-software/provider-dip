@@ -37,7 +37,7 @@ type UserInitParameters struct {
 
 	// The managing organization of the user
 	// The managing organization of the user.
-	// +crossplane:generate:reference:type=github.com/philips-software/provider-hsdp/apis/namespaced/iam/v1alpha1.Organization
+	// +crossplane:generate:reference:type=github.com/dip-software/provider-dip/apis/namespaced/iam/v1alpha1.Organization
 	// +crossplane:generate:reference:refFieldName=OrganizationRef
 	OrganizationID *string `json:"organizationId,omitempty" tf:"organization_id,omitempty"`
 
@@ -148,7 +148,7 @@ type UserParameters struct {
 
 	// The managing organization of the user
 	// The managing organization of the user.
-	// +crossplane:generate:reference:type=github.com/philips-software/provider-hsdp/apis/namespaced/iam/v1alpha1.Organization
+	// +crossplane:generate:reference:type=github.com/dip-software/provider-dip/apis/namespaced/iam/v1alpha1.Organization
 	// +crossplane:generate:reference:refFieldName=OrganizationRef
 	// +kubebuilder:validation:Optional
 	OrganizationID *string `json:"organizationId,omitempty" tf:"organization_id,omitempty"`

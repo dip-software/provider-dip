@@ -15,8 +15,8 @@ import (
 
 type SubscriptionInitParameters struct {
 
-	// +crossplane:generate:reference:type=github.com/philips-software/provider-hsdp/apis/cluster/mdm/v1alpha1.DataType
-	// +crossplane:generate:reference:extractor=github.com/philips-software/provider-hsdp/config/common.ExtractResourceName()
+	// +crossplane:generate:reference:type=github.com/dip-software/provider-dip/apis/cluster/mdm/v1alpha1.DataType
+	// +crossplane:generate:reference:extractor=github.com/dip-software/provider-dip/config/common.ExtractResourceName()
 	// +crossplane:generate:reference:refFieldName=DataTypeRef
 	// +crossplane:generate:reference:selectorFieldName=DataTypeSelector
 	DataType *string `json:"dataType,omitempty" tf:"data_type,omitempty"`
@@ -75,8 +75,8 @@ type SubscriptionObservation struct {
 
 type SubscriptionParameters struct {
 
-	// +crossplane:generate:reference:type=github.com/philips-software/provider-hsdp/apis/cluster/mdm/v1alpha1.DataType
-	// +crossplane:generate:reference:extractor=github.com/philips-software/provider-hsdp/config/common.ExtractResourceName()
+	// +crossplane:generate:reference:type=github.com/dip-software/provider-dip/apis/cluster/mdm/v1alpha1.DataType
+	// +crossplane:generate:reference:extractor=github.com/dip-software/provider-dip/config/common.ExtractResourceName()
 	// +crossplane:generate:reference:refFieldName=DataTypeRef
 	// +crossplane:generate:reference:selectorFieldName=DataTypeSelector
 	// +kubebuilder:validation:Optional

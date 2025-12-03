@@ -7,7 +7,7 @@ import (
 )
 
 const (
-	configPackagePath = "github.com/philips-software/provider-hsdp/config"
+	configPackagePath = "github.com/dip-software/provider-dip/config"
 	// ExtractResourceIDFuncPath contains the path to a custom extractor for Terraform managed resources
 	ExtractResourceIDFuncPath   = configPackagePath + "/common.ExtractResourceID()"
 	ExtractResourceNameFuncPath = configPackagePath + "/common.ExtractResourceName()"

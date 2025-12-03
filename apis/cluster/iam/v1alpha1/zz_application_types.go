@@ -29,7 +29,7 @@ type ApplicationInitParameters struct {
 
 	// the proposition ID (GUID) to attach this a application to
 	// The proposition ID (GUID) to attach this a application to.
-	// +crossplane:generate:reference:type=github.com/philips-software/provider-hsdp/apis/cluster/iam/v1alpha1.Proposition
+	// +crossplane:generate:reference:type=github.com/dip-software/provider-dip/apis/cluster/iam/v1alpha1.Proposition
 	// +crossplane:generate:reference:refFieldName=PropositionRef
 	PropositionID *string `json:"propositionId,omitempty" tf:"proposition_id,omitempty"`
 
@@ -97,7 +97,7 @@ type ApplicationParameters struct {
 
 	// the proposition ID (GUID) to attach this a application to
 	// The proposition ID (GUID) to attach this a application to.
-	// +crossplane:generate:reference:type=github.com/philips-software/provider-hsdp/apis/cluster/iam/v1alpha1.Proposition
+	// +crossplane:generate:reference:type=github.com/dip-software/provider-dip/apis/cluster/iam/v1alpha1.Proposition
 	// +crossplane:generate:reference:refFieldName=PropositionRef
 	// +kubebuilder:validation:Optional
 	PropositionID *string `json:"propositionId,omitempty" tf:"proposition_id,omitempty"`

@@ -34,14 +34,14 @@ import (
 	metricsserver "sigs.k8s.io/controller-runtime/pkg/metrics/server"
 	"sigs.k8s.io/controller-runtime/pkg/webhook"
 
-	apisCluster "github.com/philips-software/provider-hsdp/apis/cluster"
-	apisNamespaced "github.com/philips-software/provider-hsdp/apis/namespaced"
-	"github.com/philips-software/provider-hsdp/config"
-	"github.com/philips-software/provider-hsdp/internal/clients"
-	controllerCluster "github.com/philips-software/provider-hsdp/internal/controller/cluster"
-	controllerNamespaced "github.com/philips-software/provider-hsdp/internal/controller/namespaced"
-	"github.com/philips-software/provider-hsdp/internal/features"
-	"github.com/philips-software/provider-hsdp/internal/version"
+	apisCluster "github.com/dip-software/provider-dip/apis/cluster"
+	apisNamespaced "github.com/dip-software/provider-dip/apis/namespaced"
+	"github.com/dip-software/provider-dip/config"
+	"github.com/dip-software/provider-dip/internal/clients"
+	controllerCluster "github.com/dip-software/provider-dip/internal/controller/cluster"
+	controllerNamespaced "github.com/dip-software/provider-dip/internal/controller/namespaced"
+	"github.com/dip-software/provider-dip/internal/features"
+	"github.com/dip-software/provider-dip/internal/version"
 )
 
 const (

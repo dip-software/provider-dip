@@ -43,4 +43,4 @@ make build
 ## Report a Bug
 
 For filing bugs, suggesting improvements, or requesting new features, please
-open an [issue](https://github.com/philips-software/provider-hsdp/issues).
+open an [issue](https://github.com/dip-software/provider-dip/issues).

@@ -1,4 +1,4 @@
-apiVersion: dbs.hsdp.crossplane.io/v1alpha1
+apiVersion: dbs.dip.crossplane.io/v1alpha1
 kind: SqsSubscriber
 metadata:
   annotations:

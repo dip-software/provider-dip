@@ -22,7 +22,7 @@ type RoleInitParameters struct {
 
 	// The managing organization ID of this role
 	// The managing organization of the role.
-	// +crossplane:generate:reference:type=github.com/philips-software/provider-hsdp/apis/namespaced/iam/v1alpha1.Organization
+	// +crossplane:generate:reference:type=github.com/dip-software/provider-dip/apis/namespaced/iam/v1alpha1.Organization
 	// +crossplane:generate:reference:refFieldName=OrganizationRef
 	ManagingOrganization *string `json:"managingOrganization,omitempty" tf:"managing_organization,omitempty"`
 
@@ -84,7 +84,7 @@ type RoleParameters struct {
 
 	// The managing organization ID of this role
 	// The managing organization of the role.
-	// +crossplane:generate:reference:type=github.com/philips-software/provider-hsdp/apis/namespaced/iam/v1alpha1.Organization
+	// +crossplane:generate:reference:type=github.com/dip-software/provider-dip/apis/namespaced/iam/v1alpha1.Organization
 	// +crossplane:generate:reference:refFieldName=OrganizationRef
 	// +kubebuilder:validation:Optional
 	ManagingOrganization *string `json:"managingOrganization,omitempty" tf:"managing_organization,omitempty"`

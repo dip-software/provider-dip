@@ -1,4 +1,4 @@
-apiVersion: mdm.hsdp.crossplane.io/v1alpha1
+apiVersion: mdm.dip.crossplane.io/v1alpha1
 kind: DataType
 metadata:
   annotations:

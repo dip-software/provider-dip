@@ -22,7 +22,7 @@ type ClientInitParameters struct {
 
 	// the application ID (GUID) to attach this client to
 	// The application ID to attach this client to.
-	// +crossplane:generate:reference:type=github.com/philips-software/provider-hsdp/apis/namespaced/iam/v1alpha1.Application
+	// +crossplane:generate:reference:type=github.com/dip-software/provider-dip/apis/namespaced/iam/v1alpha1.Application
 	// +crossplane:generate:reference:refFieldName=ApplicationRef
 	ApplicationID *string `json:"applicationId,omitempty" tf:"application_id,omitempty"`
 
@@ -170,7 +170,7 @@ type ClientParameters struct {
 
 	// the application ID (GUID) to attach this client to
 	// The application ID to attach this client to.
-	// +crossplane:generate:reference:type=github.com/philips-software/provider-hsdp/apis/namespaced/iam/v1alpha1.Application
+	// +crossplane:generate:reference:type=github.com/dip-software/provider-dip/apis/namespaced/iam/v1alpha1.Application
 	// +crossplane:generate:reference:refFieldName=ApplicationRef
 	// +kubebuilder:validation:Optional
 	ApplicationID *string `json:"applicationId,omitempty" tf:"application_id,omitempty"`

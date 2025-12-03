@@ -17,7 +17,7 @@ type ServiceInitParameters struct {
 
 	// the application ID (GUID) to attach this service to
 	// The application ID this service falls under.
-	// +crossplane:generate:reference:type=github.com/philips-software/provider-hsdp/apis/cluster/iam/v1alpha1.Application
+	// +crossplane:generate:reference:type=github.com/dip-software/provider-dip/apis/cluster/iam/v1alpha1.Application
 	// +crossplane:generate:reference:refFieldName=ApplicationRef
 	ApplicationID *string `json:"applicationId,omitempty" tf:"application_id,omitempty"`
 
@@ -142,7 +142,7 @@ type ServiceParameters struct {
 
 	// the application ID (GUID) to attach this service to
 	// The application ID this service falls under.
-	// +crossplane:generate:reference:type=github.com/philips-software/provider-hsdp/apis/cluster/iam/v1alpha1.Application
+	// +crossplane:generate:reference:type=github.com/dip-software/provider-dip/apis/cluster/iam/v1alpha1.Application
 	// +crossplane:generate:reference:refFieldName=ApplicationRef
 	// +kubebuilder:validation:Optional
 	ApplicationID *string `json:"applicationId,omitempty" tf:"application_id,omitempty"`

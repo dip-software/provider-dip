@@ -21,8 +21,8 @@ import (
 	"github.com/pkg/errors"
 	ctrl "sigs.k8s.io/controller-runtime"
 
-	v1alpha1 "github.com/philips-software/provider-hsdp/apis/namespaced/dbs/v1alpha1"
-	features "github.com/philips-software/provider-hsdp/internal/features"
+	v1alpha1 "github.com/dip-software/provider-dip/apis/namespaced/dbs/v1alpha1"
+	features "github.com/dip-software/provider-dip/internal/features"
 )
 
 // SetupGated adds a controller that reconciles SqsSubscriber managed resources.

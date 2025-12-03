@@ -150,7 +150,7 @@ type PasswordPolicyInitParameters struct {
 	HistoryCount *int64 `json:"historyCount,omitempty" tf:"history_count,omitempty"`
 
 	// The UUID of the IAM Org to apply this policy to
-	// +crossplane:generate:reference:type=github.com/philips-software/provider-hsdp/apis/namespaced/iam/v1alpha1.Organization
+	// +crossplane:generate:reference:type=github.com/dip-software/provider-dip/apis/namespaced/iam/v1alpha1.Organization
 	// +crossplane:generate:reference:refFieldName=OrganizationRef
 	ManagingOrganization *string `json:"managingOrganization,omitempty" tf:"managing_organization,omitempty"`
 
@@ -212,7 +212,7 @@ type PasswordPolicyParameters struct {
 	HistoryCount *int64 `json:"historyCount,omitempty" tf:"history_count,omitempty"`
 
 	// The UUID of the IAM Org to apply this policy to
-	// +crossplane:generate:reference:type=github.com/philips-software/provider-hsdp/apis/namespaced/iam/v1alpha1.Organization
+	// +crossplane:generate:reference:type=github.com/dip-software/provider-dip/apis/namespaced/iam/v1alpha1.Organization
 	// +crossplane:generate:reference:refFieldName=OrganizationRef
 	// +kubebuilder:validation:Optional
 	ManagingOrganization *string `json:"managingOrganization,omitempty" tf:"managing_organization,omitempty"`

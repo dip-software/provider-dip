@@ -1,4 +1,4 @@
-apiVersion: tenant.hsdp.m.crossplane.io/v1alpha1
+apiVersion: tenant.dip.m.crossplane.io/v1alpha1
 kind: Key
 metadata:
   annotations:

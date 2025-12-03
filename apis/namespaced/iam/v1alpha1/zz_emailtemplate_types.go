@@ -33,7 +33,7 @@ type EmailTemplateInitParameters struct {
 
 	// The UUID of the IAM Org to apply this email template to
 	// The Id of the IAM Org to apply this email template to.
-	// +crossplane:generate:reference:type=github.com/philips-software/provider-hsdp/apis/namespaced/iam/v1alpha1.Organization
+	// +crossplane:generate:reference:type=github.com/dip-software/provider-dip/apis/namespaced/iam/v1alpha1.Organization
 	// +crossplane:generate:reference:refFieldName=OrganizationRef
 	ManagingOrganization *string `json:"managingOrganization,omitempty" tf:"managing_organization,omitempty"`
 
@@ -120,7 +120,7 @@ type EmailTemplateParameters struct {
 
 	// The UUID of the IAM Org to apply this email template to
 	// The Id of the IAM Org to apply this email template to.
-	// +crossplane:generate:reference:type=github.com/philips-software/provider-hsdp/apis/namespaced/iam/v1alpha1.Organization
+	// +crossplane:generate:reference:type=github.com/dip-software/provider-dip/apis/namespaced/iam/v1alpha1.Organization
 	// +crossplane:generate:reference:refFieldName=OrganizationRef
 	// +kubebuilder:validation:Optional
 	ManagingOrganization *string `json:"managingOrganization,omitempty" tf:"managing_organization,omitempty"`

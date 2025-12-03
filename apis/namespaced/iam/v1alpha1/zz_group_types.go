@@ -32,7 +32,7 @@ type GroupInitParameters struct {
 
 	// The managing organization ID
 	// The managing organization ID.
-	// +crossplane:generate:reference:type=github.com/philips-software/provider-hsdp/apis/namespaced/iam/v1alpha1.Organization
+	// +crossplane:generate:reference:type=github.com/dip-software/provider-dip/apis/namespaced/iam/v1alpha1.Organization
 	// +crossplane:generate:reference:refFieldName=OrganizationRef
 	ManagingOrganization *string `json:"managingOrganization,omitempty" tf:"managing_organization,omitempty"`
 
@@ -54,7 +54,7 @@ type GroupInitParameters struct {
 
 	// The list of role IDS to assign to this group
 	// The list of role IDS to assign to this group.
-	// +crossplane:generate:reference:type=github.com/philips-software/provider-hsdp/apis/namespaced/iam/v1alpha1.Role
+	// +crossplane:generate:reference:type=github.com/dip-software/provider-dip/apis/namespaced/iam/v1alpha1.Role
 	// +crossplane:generate:reference:refFieldName=RoleRef
 	// +listType=set
 	Roles []*string `json:"roles,omitempty" tf:"roles,omitempty"`
@@ -69,7 +69,7 @@ type GroupInitParameters struct {
 
 	// The list of service identity IDs to include in this group. See hsdp_iam_service
 	// The list of service identity IDs to include in this group.
-	// +crossplane:generate:reference:type=github.com/philips-software/provider-hsdp/apis/namespaced/iam/v1alpha1.Service
+	// +crossplane:generate:reference:type=github.com/dip-software/provider-dip/apis/namespaced/iam/v1alpha1.Service
 	// +crossplane:generate:reference:refFieldName=ServiceRef
 	// +listType=set
 	Services []*string `json:"services,omitempty" tf:"services,omitempty"`
@@ -84,7 +84,7 @@ type GroupInitParameters struct {
 
 	// The list of user IDs to include in this group. The provider only manages this list of users. Existing users added by others means to the group by the provider. It is not practical to manage hundreds or thousands of users this way of course.
 	// The list of user IDs to include in this group. The provider only manages this list of users. Existing users added by others means to the group by the provider. It is not practical to manage hundreds or thousands of users this way of course.
-	// +crossplane:generate:reference:type=github.com/philips-software/provider-hsdp/apis/namespaced/iam/v1alpha1.User
+	// +crossplane:generate:reference:type=github.com/dip-software/provider-dip/apis/namespaced/iam/v1alpha1.User
 	// +crossplane:generate:reference:refFieldName=UserRef
 	// +listType=set
 	Users []*string `json:"users,omitempty" tf:"users,omitempty"`
@@ -158,7 +158,7 @@ type GroupParameters struct {
 
 	// The managing organization ID
 	// The managing organization ID.
-	// +crossplane:generate:reference:type=github.com/philips-software/provider-hsdp/apis/namespaced/iam/v1alpha1.Organization
+	// +crossplane:generate:reference:type=github.com/dip-software/provider-dip/apis/namespaced/iam/v1alpha1.Organization
 	// +crossplane:generate:reference:refFieldName=OrganizationRef
 	// +kubebuilder:validation:Optional
 	ManagingOrganization *string `json:"managingOrganization,omitempty" tf:"managing_organization,omitempty"`
@@ -182,7 +182,7 @@ type GroupParameters struct {
 
 	// The list of role IDS to assign to this group
 	// The list of role IDS to assign to this group.
-	// +crossplane:generate:reference:type=github.com/philips-software/provider-hsdp/apis/namespaced/iam/v1alpha1.Role
+	// +crossplane:generate:reference:type=github.com/dip-software/provider-dip/apis/namespaced/iam/v1alpha1.Role
 	// +crossplane:generate:reference:refFieldName=RoleRef
 	// +kubebuilder:validation:Optional
 	// +listType=set
@@ -198,7 +198,7 @@ type GroupParameters struct {
 
 	// The list of service identity IDs to include in this group. See hsdp_iam_service
 	// The list of service identity IDs to include in this group.
-	// +crossplane:generate:reference:type=github.com/philips-software/provider-hsdp/apis/namespaced/iam/v1alpha1.Service
+	// +crossplane:generate:reference:type=github.com/dip-software/provider-dip/apis/namespaced/iam/v1alpha1.Service
 	// +crossplane:generate:reference:refFieldName=ServiceRef
 	// +kubebuilder:validation:Optional
 	// +listType=set
@@ -214,7 +214,7 @@ type GroupParameters struct {
 
 	// The list of user IDs to include in this group. The provider only manages this list of users. Existing users added by others means to the group by the provider. It is not practical to manage hundreds or thousands of users this way of course.
 	// The list of user IDs to include in this group. The provider only manages this list of users. Existing users added by others means to the group by the provider. It is not practical to manage hundreds or thousands of users this way of course.
-	// +crossplane:generate:reference:type=github.com/philips-software/provider-hsdp/apis/namespaced/iam/v1alpha1.User
+	// +crossplane:generate:reference:type=github.com/dip-software/provider-dip/apis/namespaced/iam/v1alpha1.User
 	// +crossplane:generate:reference:refFieldName=UserRef
 	// +kubebuilder:validation:Optional
 	// +listType=set

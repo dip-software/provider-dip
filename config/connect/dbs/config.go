@@ -6,7 +6,7 @@ Copyright 2024 Koninklijke Philips N.V., https://www.philips.com
 
 import (
 	"github.com/crossplane/upjet/v2/pkg/config"
-	"github.com/philips-software/provider-hsdp/config/common"
+	"github.com/dip-software/provider-dip/config/common"
 )
 
 const (
@@ -30,7 +30,7 @@ func Configure(p *config.Provider) {
 			SelectorFieldName: "SubscriberSelector",
 		}
 		r.References["data_type"] = config.Reference{
-			Type:              "github.com/philips-software/provider-hsdp/apis/cluster/mdm/v1alpha1.DataType",
+			Type:              "github.com/dip-software/provider-dip/apis/cluster/mdm/v1alpha1.DataType",
 			RefFieldName:      "DataTypeRef",
 			SelectorFieldName: "DataTypeSelector",
 			Extractor:         common.ExtractResourceNameFuncPath,

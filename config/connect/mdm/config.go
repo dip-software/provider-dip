@@ -19,7 +19,7 @@ func Configure(p *config.Provider) {
 		r.ShortGroup = shortGroup
 		r.Kind = "Proposition"
 		r.References["organization_id"] = config.Reference{
-			Type:              "github.com/philips-software/provider-hsdp/apis/cluster/iam/v1alpha1.Organization",
+			Type:              "github.com/dip-software/provider-dip/apis/cluster/iam/v1alpha1.Organization",
 			RefFieldName:      "OrganizationRef",
 			SelectorFieldName: "OrganizationSelector",
 		}

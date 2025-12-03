@@ -9,8 +9,8 @@ package v1alpha1
 import (
 	"context"
 	reference "github.com/crossplane/crossplane-runtime/v2/pkg/reference"
-	v1alpha1 "github.com/philips-software/provider-hsdp/apis/cluster/mdm/v1alpha1"
-	common "github.com/philips-software/provider-hsdp/config/common"
+	v1alpha1 "github.com/dip-software/provider-dip/apis/cluster/mdm/v1alpha1"
+	common "github.com/dip-software/provider-dip/config/common"
 	errors "github.com/pkg/errors"
 	client "sigs.k8s.io/controller-runtime/pkg/client"
 )

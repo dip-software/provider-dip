@@ -1,4 +1,4 @@
-module github.com/philips-software/provider-hsdp
+module github.com/dip-software/provider-dip
 
 go 1.25.1
 

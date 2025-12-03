@@ -26,7 +26,7 @@ type PropositionInitParameters struct {
 	Name *string `json:"name,omitempty" tf:"name,omitempty"`
 
 	// The ID of the IAM organization this Proposition should fall under
-	// +crossplane:generate:reference:type=github.com/philips-software/provider-hsdp/apis/cluster/iam/v1alpha1.Organization
+	// +crossplane:generate:reference:type=github.com/dip-software/provider-dip/apis/cluster/iam/v1alpha1.Organization
 	// +crossplane:generate:reference:refFieldName=OrganizationRef
 	// +crossplane:generate:reference:selectorFieldName=OrganizationSelector
 	OrganizationID *string `json:"organizationId,omitempty" tf:"organization_id,omitempty"`
@@ -88,7 +88,7 @@ type PropositionParameters struct {
 	Name *string `json:"name,omitempty" tf:"name,omitempty"`
 
 	// The ID of the IAM organization this Proposition should fall under
-	// +crossplane:generate:reference:type=github.com/philips-software/provider-hsdp/apis/cluster/iam/v1alpha1.Organization
+	// +crossplane:generate:reference:type=github.com/dip-software/provider-dip/apis/cluster/iam/v1alpha1.Organization
 	// +crossplane:generate:reference:refFieldName=OrganizationRef
 	// +crossplane:generate:reference:selectorFieldName=OrganizationSelector
 	// +kubebuilder:validation:Optional

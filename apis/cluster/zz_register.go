@@ -10,12 +10,12 @@ package cluster
 import (
 	"k8s.io/apimachinery/pkg/runtime"
 
-	v1alpha1 "github.com/philips-software/provider-hsdp/apis/cluster/dbs/v1alpha1"
-	v1alpha1iam "github.com/philips-software/provider-hsdp/apis/cluster/iam/v1alpha1"
-	v1alpha1mdm "github.com/philips-software/provider-hsdp/apis/cluster/mdm/v1alpha1"
-	v1alpha1tenant "github.com/philips-software/provider-hsdp/apis/cluster/tenant/v1alpha1"
-	v1alpha1cluster "github.com/philips-software/provider-hsdp/apis/cluster/v1alpha1"
-	v1beta1 "github.com/philips-software/provider-hsdp/apis/cluster/v1beta1"
+	v1alpha1 "github.com/dip-software/provider-dip/apis/cluster/dbs/v1alpha1"
+	v1alpha1iam "github.com/dip-software/provider-dip/apis/cluster/iam/v1alpha1"
+	v1alpha1mdm "github.com/dip-software/provider-dip/apis/cluster/mdm/v1alpha1"
+	v1alpha1tenant "github.com/dip-software/provider-dip/apis/cluster/tenant/v1alpha1"
+	v1alpha1cluster "github.com/dip-software/provider-dip/apis/cluster/v1alpha1"
+	v1beta1 "github.com/dip-software/provider-dip/apis/cluster/v1beta1"
 )
 
 func init() {

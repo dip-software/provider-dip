@@ -24,7 +24,7 @@ type RoleSharingPolicyInitParameters struct {
 	Purpose *string `json:"purpose,omitempty" tf:"purpose,omitempty"`
 
 	// The ID of the role to share
-	// +crossplane:generate:reference:type=github.com/philips-software/provider-hsdp/apis/namespaced/iam/v1alpha1.Role
+	// +crossplane:generate:reference:type=github.com/dip-software/provider-dip/apis/namespaced/iam/v1alpha1.Role
 	// +crossplane:generate:reference:refFieldName=RoleRef
 	RoleID *string `json:"roleId,omitempty" tf:"role_id,omitempty"`
 
@@ -41,7 +41,7 @@ type RoleSharingPolicyInitParameters struct {
 	SharingPolicy *string `json:"sharingPolicy,omitempty" tf:"sharing_policy,omitempty"`
 
 	// The target organization UUID to apply this policy for. This can either be a root IAM Org or a subOrg in an existing hierarchy
-	// +crossplane:generate:reference:type=github.com/philips-software/provider-hsdp/apis/namespaced/iam/v1alpha1.Organization
+	// +crossplane:generate:reference:type=github.com/dip-software/provider-dip/apis/namespaced/iam/v1alpha1.Organization
 	// +crossplane:generate:reference:refFieldName=OrganizationRef
 	TargetOrganizationID *string `json:"targetOrganizationId,omitempty" tf:"target_organization_id,omitempty"`
 
@@ -86,7 +86,7 @@ type RoleSharingPolicyParameters struct {
 	Purpose *string `json:"purpose,omitempty" tf:"purpose,omitempty"`
 
 	// The ID of the role to share
-	// +crossplane:generate:reference:type=github.com/philips-software/provider-hsdp/apis/namespaced/iam/v1alpha1.Role
+	// +crossplane:generate:reference:type=github.com/dip-software/provider-dip/apis/namespaced/iam/v1alpha1.Role
 	// +crossplane:generate:reference:refFieldName=RoleRef
 	// +kubebuilder:validation:Optional
 	RoleID *string `json:"roleId,omitempty" tf:"role_id,omitempty"`
@@ -105,7 +105,7 @@ type RoleSharingPolicyParameters struct {
 	SharingPolicy *string `json:"sharingPolicy,omitempty" tf:"sharing_policy,omitempty"`
 
 	// The target organization UUID to apply this policy for. This can either be a root IAM Org or a subOrg in an existing hierarchy
-	// +crossplane:generate:reference:type=github.com/philips-software/provider-hsdp/apis/namespaced/iam/v1alpha1.Organization
+	// +crossplane:generate:reference:type=github.com/dip-software/provider-dip/apis/namespaced/iam/v1alpha1.Organization
 	// +crossplane:generate:reference:refFieldName=OrganizationRef
 	// +kubebuilder:validation:Optional
 	TargetOrganizationID *string `json:"targetOrganizationId,omitempty" tf:"target_organization_id,omitempty"`

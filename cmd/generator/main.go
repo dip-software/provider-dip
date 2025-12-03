@@ -7,7 +7,7 @@ import (
 
 	"github.com/crossplane/upjet/v2/pkg/pipeline"
 
-	"github.com/philips-software/provider-hsdp/config"
+	"github.com/dip-software/provider-dip/config"
 )
 
 func main() {
