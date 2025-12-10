@@ -78,6 +78,51 @@ resources:
             name: '- (Required) The name of the device group'
             proposition_id: '- (Required) The proposition ID where this bucket falls under'
         importStatements: []
+    hsdp_connect_iot_provisioning_orgconfiguration:
+        subCategory: Provisioning
+        description: Manages HSDP DIP Connect IoT Provisioning Org Configuration
+        name: hsdp_connect_iot_provisioning_orgconfiguration
+        title: hsdp_connect_iot_provisioning_orgconfiguration
+        examples:
+            - name: my-orgconfig
+              manifest: |-
+                {
+                  "bootstrap_signature": [
+                    {
+                      "algorithm": "RSA-SHA256",
+                      "config": [
+                        {
+                          "padding": "RSA_PKCS1_PSS_PADDING",
+                          "salt_length": "RSA_PSS_SALTLEN_MAX_SIGN",
+                          "type": "RSA"
+                        }
+                      ],
+                      "public_key": "-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSBlahBlahBlahMqgzQIDAQAB\n-----END PUBLIC KEY-----"
+                    }
+                  ],
+                  "organization_guid": "1ac2e233-8146-4661-8ec4-dc956aeb5a4b",
+                  "service_account": [
+                    {
+                      "service_account_id": "demo_test_tf.xyz-app.xyz-prop@demo.iot__connect__sandbox.apmplatform.philips-healthsuite.com",
+                      "service_account_key": "-----BEGIN RSA PRIVATE KEY-----\nMIIEowBlahBlahI1KExUm\n-----END RSA PRIVATE KEY-----"
+                    }
+                  ]
+                }
+        argumentDocs:
+            bootstrap_signature: '- (Required) Bootstrap signature configuration block containing:'
+            bootstrap_signature.algorithm: '- (Required) The signature algorithm to use (e.g., "RSA-SHA256").'
+            bootstrap_signature.config: '- (Optional) Additional configuration block containing:'
+            bootstrap_signature.public_key: '- (Required) The public key for bootstrap signature verification.'
+            id: '- The unique identifier of the organization configuration.'
+            organization_guid: '- (Required, ForceNew) The GUID of the organization to configure.'
+            padding: '- (Optional) The padding type (e.g., "RSA_PKCS1_PSS_PADDING").'
+            salt_length: '- (Optional) The salt length configuration (e.g., "RSA_PSS_SALTLEN_MAX_SIGN").'
+            service_account: '- (Required) Service account configuration block containing:'
+            service_account.service_account_id: '- (Required) The service account ID for the organization.'
+            service_account.service_account_key: '- (Required, Sensitive) The service account private key.'
+            type: '- (Optional) The signature type (e.g., "RSA", "ECC", "DSA").'
+        importStatements:
+            - terraform import hsdp_connect_iot_provisioning_orgconfiguration.my-orgconfig <id>
     hsdp_connect_mdm_application:
         subCategory: Master Data Management (MDM)
         description: Manages HSDP Connect MDM Applications

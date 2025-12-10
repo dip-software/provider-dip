@@ -12,10 +12,10 @@ TERRAFORM_VERSION_VALID := $(shell [ "$(TERRAFORM_VERSION)" = "`printf "$(TERRAF
 
 export TERRAFORM_PROVIDER_SOURCE ?= philips-software/hsdp
 export TERRAFORM_PROVIDER_REPO ?= https://github.com/philips-software/terraform-provider-hsdp
-export TERRAFORM_PROVIDER_VERSION ?= 0.71.1
+export TERRAFORM_PROVIDER_VERSION ?= 1.0.0
 export TERRAFORM_PROVIDER_DOWNLOAD_NAME ?= terraform-provider-hsdp
 export TERRAFORM_PROVIDER_DOWNLOAD_URL_PREFIX ?= https://github.com/philips-software/terraform-provider-hsdp/releases/download/v$(TERRAFORM_PROVIDER_VERSION)
-export TERRAFORM_NATIVE_PROVIDER_BINARY ?= terraform-provider-hsdp_v0.71.1_x5
+export TERRAFORM_NATIVE_PROVIDER_BINARY ?= terraform-provider-hsdp_v1.0.0_x5
 export TERRAFORM_DOCS_PATH ?= docs/resources
 
 
